@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-test("signin", async ({ page }) => {
-  await page.goto("/login");
+test("signin", async ({ page, baseURL }) => {
+  await page.goto(`${baseURL}/login`);
 
   expect(page.getByText("Please log in to continue."));
 
@@ -11,7 +11,7 @@ test("signin", async ({ page }) => {
 
   await page.getByRole("button", { name: "Log in" }).click();
 
-  await page.waitForURL("/dashboard");
+  await page.waitForURL(`${baseURL}/dashboard`);
 
   expect(page.getByText("Dashboard"));
 });

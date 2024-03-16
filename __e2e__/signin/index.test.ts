@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("signin", async ({ page, baseURL }) => {
-  await page.goto(`${baseURL}/login`);
+  expect(page.goto(`${baseURL}/login`));
 
   expect(page.getByText("Please log in to continue."));
 

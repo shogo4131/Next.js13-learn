@@ -13,11 +13,11 @@ export default defineConfig({
   testDir: "./__e2e__",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: "html",
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL: process.env.E2E_URL,
     trace: "on-first-retry",
   },
   timeout: 100000,

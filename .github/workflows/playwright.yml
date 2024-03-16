@@ -13,13 +13,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: "pnpm"
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
       - name: Install dependencies
         run: npm install -g pnpm && pnpm install
+
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
+
       - name: Run Playwright tests
         run: pnpm exec playwright test
+        env:
+          E2E_URL: ${{ secrets.E2E_URL }}
+          E2E_EMAIL: ${{ secrets.E2E_EMAIL }}
+          E2E_PASSWORD: ${{ secrets.E2E_PASSWORD }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -7,7 +7,9 @@
     "lint": "next lint",
     "seed": "node -r dotenv/config ./scripts/seed.js",
     "test:e2e": "pnpm exec playwright test",
-    "test:gen": "pnpm exec playwright codegen"
+    "test:gen": "pnpm exec playwright codegen",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -28,16 +30,28 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.8.0",
     "@playwright/test": "^1.42.1",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/addon-onboarding": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/nextjs": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/test": "^8.2.9",
     "@types/bcrypt": "^5.0.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
     "dotenv": "^16.3.1",
     "eslint": "^8.52.0",
     "eslint-config-next": "^14.0.0",
-    "prettier": "^3.0.3"
+    "eslint-plugin-storybook": "^0.8.0",
+    "prettier": "^3.0.3",
+    "storybook": "^8.2.9"
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }

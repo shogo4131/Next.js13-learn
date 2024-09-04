@@ -5,7 +5,7 @@ import { CreateInvoice } from "@/components/ui/invoices/buttons";
 import { lusitana } from "@/components/ui/fonts";
 import { InvoicesTableSkeleton } from "@/components/ui/skeletons";
 import { Suspense } from "react";
-import { fetchInvoicesPages } from "@/app/lib/data";
+import { fetchInvoicesPages } from "@/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

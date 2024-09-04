@@ -1,7 +1,7 @@
 import CustomersTable from "@/components/ui/customers/table";
 import { InvoicesTableSkeleton } from "@/components/ui/skeletons";
 import { Suspense } from "react";
-import { fetchFilteredCustomers } from "@/app/lib/data";
+import { fetchFilteredCustomers } from "@/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import Form from "@/components/ui/invoices/edit-form";
 import Breadcrumbs from "@/components/ui/invoices/breadcrumbs";
-import { fetchInvoiceById, fetchCustomers } from "@/app/lib/data";
+import { fetchInvoiceById, fetchCustomers } from "@/lib/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 

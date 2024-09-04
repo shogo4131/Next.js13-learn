@@ -1,6 +1,6 @@
 "use client";
 
-import { CustomerField } from "@/app/lib/definitions";
+import { CustomerField } from "@/lib/definitions";
 import Link from "next/link";
 import {
   CheckIcon,
@@ -9,7 +9,7 @@ import {
   UserCircleIcon
 } from "@heroicons/react/24/outline";
 import { Button } from "@/components/ui/button";
-import { createInvoice } from "@/app/lib/actions";
+import { createInvoice } from "@/lib/actions";
 import { useFormState } from "react-dom";
 
 export default function Form({ customers }: { customers: CustomerField[] }) {

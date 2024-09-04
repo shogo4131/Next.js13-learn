@@ -1,5 +1,5 @@
-import CustomersTable from "@/app/ui/customers/table";
-import { InvoicesTableSkeleton } from "@/app/ui/skeletons";
+import CustomersTable from "@/components/ui/customers/table";
+import { InvoicesTableSkeleton } from "@/components/ui/skeletons";
 import { Suspense } from "react";
 import { fetchFilteredCustomers } from "@/app/lib/data";
 import { Metadata } from "next";

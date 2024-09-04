@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { createInvoice } from "@/lib/actions";
 import { useFormState } from "react-dom";
 
-export default function Form({ customers }: { customers: CustomerField[] }) {
+export const CreateInvoiceForm = ({ customers }: { customers: CustomerField[] }) => {
   const initialState = { message: null, errors: {} };
   const [state, dispatch] = useFormState(createInvoice, initialState);
 

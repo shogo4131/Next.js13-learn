@@ -1,4 +1,4 @@
-import CustomersTable from "@/components/ui/customers/table";
+import CustomersTable from "@/features/customers/components/customersTable/CustomersTable";
 import { InvoicesTableSkeleton } from "@/components/ui/skeletons";
 import { Suspense } from "react";
 import { fetchFilteredCustomers } from "@/lib/data";

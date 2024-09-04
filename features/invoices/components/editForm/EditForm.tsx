@@ -14,13 +14,13 @@ import { useFormState } from "react-dom";
 
 const initialState = { message: null, errors: {} };
 
-export default function EditInvoiceForm({
+export const  EditInvoiceForm = ({
   invoice,
   customers
 }: {
   invoice: InvoiceForm;
   customers: CustomerField[];
-}) {
+}) => {
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
   const [state, dispatch] = useFormState(updateInvoiceWithId, initialState);
 

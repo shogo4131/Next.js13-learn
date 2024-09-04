@@ -1,4 +1,4 @@
-import Form from "@/components/ui/invoices/create-form";
+import { CreateInvoiceForm } from "@/features/invoices/components";
 import Breadcrumbs from "@/components/ui/invoices/breadcrumbs";
 import { fetchCustomers } from "@/lib/data";
 import { Metadata } from "next";
@@ -22,7 +22,7 @@ export default async function Page() {
           }
         ]}
       />
-      <Form customers={customers} />
+      <CreateInvoiceForm customers={customers} />
     </main>
   );
 }

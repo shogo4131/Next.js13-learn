@@ -1,5 +1,5 @@
 import AcmeLogo from "@/components/ui/acme-logo";
-import LoginForm from "@/components/ui/login-form";
+import { LoginForm } from "@/features/auth/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,4 +1,4 @@
-import Form from "@/components/ui/invoices/edit-form";
+import { EditInvoiceForm } from "@/features/invoices/components";
 import Breadcrumbs from "@/components/ui/invoices/breadcrumbs";
 import { fetchInvoiceById, fetchCustomers } from "@/lib/data";
 import { notFound } from "next/navigation";
@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           }
         ]}
       />
-      <Form invoice={invoice} customers={customers} />
+      <EditInvoiceForm invoice={invoice} customers={customers} />
     </main>
   );
 }

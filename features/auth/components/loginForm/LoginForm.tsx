@@ -3,11 +3,11 @@
 import { lusitana } from "@/components/ui/fonts";
 import { AtSymbolIcon, KeyIcon, ExclamationCircleIcon } from "@heroicons/react/24/outline";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import { Button } from "./button";
+import { Button } from "../../../../components/ui/button";
 import { useFormState, useFormStatus } from "react-dom";
 import { authenticate } from "@/lib/actions";
 
-export default function LoginForm() {
+export const LoginForm = () => {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
 
   return (

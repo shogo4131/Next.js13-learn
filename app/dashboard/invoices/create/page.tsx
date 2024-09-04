@@ -1,5 +1,5 @@
 import { CreateInvoiceForm } from "@/features/invoices/components";
-import Breadcrumbs from "@/components/ui/invoices/breadcrumbs";
+import { Breadcrumb } from "@/components/ui";
 import { fetchCustomers } from "@/lib/data";
 import { Metadata } from "next";
 
@@ -12,7 +12,7 @@ export default async function Page() {
 
   return (
     <main>
-      <Breadcrumbs
+      <Breadcrumb
         breadcrumbs={[
           { label: "Invoices", href: "/dashboard/invoices" },
           {

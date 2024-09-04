@@ -1,5 +1,5 @@
 import { EditInvoiceForm } from "@/features/invoices/components";
-import Breadcrumbs from "@/components/ui/invoices/breadcrumbs";
+import { Breadcrumb } from "@/components/ui";
 import { fetchInvoiceById, fetchCustomers } from "@/lib/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <main>
-      <Breadcrumbs
+      <Breadcrumb
         breadcrumbs={[
           { label: "Invoices", href: "/dashboard/invoices" },
           {

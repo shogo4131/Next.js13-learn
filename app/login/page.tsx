@@ -3,7 +3,7 @@ import LoginForm from "@/components/ui/login-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Login | Acme Dashboard",
+  title: "Login | Acme Dashboard"
 };
 
 export default function LoginPage() {

@@ -5,16 +5,13 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EditInvoice | Acme Dashboard",
+  title: "EditInvoice | Acme Dashboard"
 };
 
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
 
-  const [invoice, customers] = await Promise.all([
-    fetchInvoiceById(id),
-    fetchCustomers(),
-  ]);
+  const [invoice, customers] = await Promise.all([fetchInvoiceById(id), fetchCustomers()]);
 
   if (!invoice) notFound();
 
@@ -26,8 +23,8 @@ export default async function Page({ params }: { params: { id: string } }) {
           {
             label: "Edit Invoice",
             href: `/dashboard/invoices/${id}/edit`,
-            active: true,
-          },
+            active: true
+          }
         ]}
       />
       <Form invoice={invoice} customers={customers} />

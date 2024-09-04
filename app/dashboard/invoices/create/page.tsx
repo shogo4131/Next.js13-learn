@@ -4,7 +4,7 @@ import { fetchCustomers } from "@/app/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CreateInvoice | Acme Dashboard",
+  title: "CreateInvoice | Acme Dashboard"
 };
 
 export default async function Page() {
@@ -18,8 +18,8 @@ export default async function Page() {
           {
             label: "Create Invoice",
             href: "/dashboard/invoices/create",
-            active: true,
-          },
+            active: true
+          }
         ]}
       />
       <Form customers={customers} />

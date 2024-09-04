@@ -6,12 +6,12 @@ import { Suspense } from "react";
 import {
   RevenueChartSkeleton,
   LatestInvoicesSkeleton,
-  CardsSkeleton,
+  CardsSkeleton
 } from "@/components/ui/skeletons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dashboard | Acme Dashboard",
+  title: "Dashboard | Acme Dashboard"
 };
 
 export const dynamic = "force-dynamic";
@@ -19,9 +19,7 @@ export const dynamic = "force-dynamic";
 export default async function Page() {
   return (
     <main>
-      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-        Dashboard
-      </h1>
+      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>Dashboard</h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <Suspense fallback={<CardsSkeleton />}>
           <CardWrapper />

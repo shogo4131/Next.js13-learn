@@ -5,11 +5,11 @@ import { fetchFilteredCustomers } from "@/app/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customers | Acme Dashboard",
+  title: "Customers | Acme Dashboard"
 };
 
 export default async function Page({
-  searchParams,
+  searchParams
 }: {
   searchParams?: {
     query?: string;

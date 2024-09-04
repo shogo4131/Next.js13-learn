@@ -9,11 +9,11 @@ import { fetchInvoicesPages } from "@/app/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Invoices | Acme Dashboard",
+  title: "Invoices | Acme Dashboard"
 };
 
 export default async function Page({
-  searchParams,
+  searchParams
 }: {
   searchParams?: {
     query?: string;

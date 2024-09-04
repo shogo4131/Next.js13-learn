@@ -19,30 +19,30 @@ export default defineConfig({
   reporter: "html",
   use: {
     baseURL: "http://localhost:3000",
-    trace: "on-first-retry",
+    trace: "on-first-retry"
   },
   timeout: 100000,
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"], locale: "ja-JP" },
+      use: { ...devices["Desktop Chrome"], locale: "ja-JP" }
     },
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"], locale: "ja-JP" },
+      use: { ...devices["Desktop Firefox"], locale: "ja-JP" }
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"], locale: "ja-JP" },
-    },
+      use: { ...devices["Desktop Safari"], locale: "ja-JP" }
+    }
   ],
 
   /* Run your local dev server before starting the tests */
   webServer: {
     command: "pnpm dev",
     url: "http://localhost:3000",
-    reuseExistingServer: !process.env.CI,
-  },
+    reuseExistingServer: !process.env.CI
+  }
 });

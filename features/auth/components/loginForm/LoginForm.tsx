@@ -5,7 +5,7 @@ import { AtSymbolIcon, KeyIcon, ExclamationCircleIcon } from "@heroicons/react/2
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { Button } from "../../../../components/ui/button";
 import { useFormState, useFormStatus } from "react-dom";
-import { authenticate } from "@/lib/actions";
+import { authenticate } from "@/actions/authAction";
 
 export const LoginForm = () => {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);

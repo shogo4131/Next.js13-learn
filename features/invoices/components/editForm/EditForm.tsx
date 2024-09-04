@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { updateInvoice } from "@/lib/actions";
+import { updateInvoice } from "@/actions/invoiceAction";
 import { useFormState } from "react-dom";
 
 const initialState = { message: null, errors: {} };

@@ -1,15 +1,9 @@
 "use server";
 
 import { sql } from "@vercel/postgres";
-import {
-  CustomerField,
-  CustomersTable,
-  InvoiceForm,
-  InvoicesTable,
-  LatestInvoiceRaw,
-  User,
-  Revenue
-} from "./definitions";
+import { CustomerField, CustomersTable, Revenue } from "../types/customer";
+import { InvoiceForm, InvoicesTable, LatestInvoiceRaw } from "../types/invoice";
+import { User } from "../types/user";
 import { formatCurrency } from "./utils";
 
 export async function fetchRevenue() {

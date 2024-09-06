@@ -1,6 +1,7 @@
 "use client";
 
-import { CustomerField, InvoiceForm } from "@/lib/definitions";
+import { CustomerField } from "@/types/customer";
+import { InvoiceForm } from "@/types/invoice";
 import {
   CheckIcon,
   ClockIcon,

@@ -1,7 +1,9 @@
 import { Suspense } from "react";
-import CustomersTable from "../../components/customersTable/CustomersTable";
+import { CustomersTable } from "../../components/customersTable";
 import { fetchFilteredCustomers } from "@/lib/data";
 import { InvoicesTableSkeleton } from "@/components/ui/skeletons";
+import Search from "@/components/ui/search";
+import { lusitana } from "@/components/ui/fonts";
 
 type Props = {
   searchParams?: {
@@ -12,13 +14,16 @@ type Props = {
 
 export const CustomersPage = async ({ searchParams }: Props) => {
   const query = searchParams?.query || "";
-  const currentPage = searchParams?.page || 1;
 
   const customers = await fetchFilteredCustomers(query);
 
   return (
     <div className="w-full">
-      <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
+      <div className="flex w-full items-center justify-between">
+        <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>Customers</h1>
+      </div>
+      <Search placeholder="Search customers..." />
+      <Suspense key={query} fallback={<InvoicesTableSkeleton />}>
         <CustomersTable customers={customers} />
       </Suspense>
     </div>

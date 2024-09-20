@@ -1,17 +1,9 @@
 import Image from "next/image";
-import { lusitana } from "@/components/ui/fonts";
-import Search from "@/components/ui/search";
 import { FormattedCustomersTable } from "@/types/customer";
 
-export default async function CustomersTable({
-  customers
-}: {
-  customers: FormattedCustomersTable[];
-}) {
+export const CustomersTable = ({ customers }: { customers: FormattedCustomersTable[] }) => {
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>Customers</h1>
-      <Search placeholder="Search customers..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
@@ -110,4 +102,4 @@ export default async function CustomersTable({
       </div>
     </div>
   );
-}
+};
